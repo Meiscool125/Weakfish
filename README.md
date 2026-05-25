@@ -38,6 +38,4 @@ python main.py
 Configuring for Bot Testing
 To test an engine script running out of engine.py, toggle the player mode parameters at the top of main.py:
 
-Set both to False to watch two bots battle each other in real-time
-PLAYER_ONE = True  # True = Human Controls White, False = Bot Controls White
-PLAYER_TWO = False # True = Human Controls Black, False = Bot Controls Black
+Set PLAYER_ONE and PLAYER_TWO to False to watch two bots battle each other in real-time.
