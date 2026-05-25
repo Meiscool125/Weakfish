@@ -17,8 +17,6 @@ Ray-Casting Move Generation: Efficiently tracks absolute pins, check vectors, an
 
 Full Draw-Condition Tracking: Automatic evaluations for Stalemate, Threefold Repetition (via unique spatial board-string hashing), the 50-Move Rule, and full Insufficient Material detection (e.g., King + Minor piece variants).
 
-# Specialized Move Validation:
-
 State-isolated En Passant target square log validation (fully protected against unique horizontal row-pin checks).
 
 Castling privileges managed via specialized object state logs tracking King and Rook displacement history.
