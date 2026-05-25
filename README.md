@@ -1,7 +1,7 @@
-Weakfish Chess Engine - Core State & GUI Framework (v1.0)
+# Weakfish Chess Engine - Core State & GUI Framework (v1.0)
 A robust, fully rule-compliant chess state machine and graphical user interface built from scratch in Python using Pygame. This project is designed decoupled and modularized to serve as a high-performance sandbox and baseline framework for chess engine development, positional evaluation models, and AI search tree implementations.
 
-🚀 Architectural Design & Modularity
+# 🚀 Architectural Design & Modularity
 The codebase strictly adheres to a separated concern architecture, making it easy to swap components or drop in custom engine logic:
 
 game_state_handler.py: The pure mathematics and physics layer of the engine. It tracks the 8x8 matrix, coordinates logs, and acts as a pure state machine. It is completely decoupled from any rendering packages.
@@ -10,14 +10,14 @@ main.py: Handles user interactions, window event polling, rendering frame buffer
 
 engine.py: An isolated sandbox script dedicated to move selection algorithms. It is currently configured with a random legal move selector, serving as the exact injection point for custom Minimax, Alpha-Beta Pruning, or Neural Network search trees.
 
-🛠️ Key Engine Features & Rule Enforcement
+# 🛠️ Key Engine Features & Rule Enforcement
 Unlike basic starter frameworks, this baseline completely implements advanced FIDE chess rules out of the box, mitigating edge-case bugs for downstream engine developers:
 
 Ray-Casting Move Generation: Efficiently tracks absolute pins, check vectors, and double-check rays dynamically before verifying pseudo-legal paths.
 
 Full Draw-Condition Tracking: Automatic evaluations for Stalemate, Threefold Repetition (via unique spatial board-string hashing), the 50-Move Rule, and full Insufficient Material detection (e.g., King + Minor piece variants).
 
-Specialized Move Validation:
+# Specialized Move Validation:
 
 State-isolated En Passant target square log validation (fully protected against unique horizontal row-pin checks).
 
@@ -27,7 +27,7 @@ Interlocking interactive user menus for Pawn Promotion.
 
 Bulletproof Transaction Logs: State variables and histories are safely stacked, allowing unlimited turn rollbacks (undo_move) without data corruption, index desynchronization, or engine memory leaking.
 
-📥 Getting Started
+# 📥 Getting Started
 Prerequisites
 Python 3.10+
 
@@ -40,6 +40,6 @@ python main.py
 Configuring for Bot Testing
 To test an engine script running out of engine.py, toggle the player mode parameters at the top of main.py:
 
-# Set both to False to watch two bots battle each other in real-time
+Set both to False to watch two bots battle each other in real-time
 PLAYER_ONE = True  # True = Human Controls White, False = Bot Controls White
 PLAYER_TWO = False # True = Human Controls Black, False = Bot Controls Black
